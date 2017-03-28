@@ -1,0 +1,13 @@
+alliancebackend\dao\BlogDao.class
+alliancebackend\config\WebSocketConfig.class
+alliancebackend\config\AppInitializer.class
+alliancebackend\dao\UserDao.class
+alliancebackend\config\DBConfig.class
+alliancebackend\controller\BlogController.class
+alliancebackend\model\User.class
+alliancebackend\model\Blog.class
+alliancebackend\config\AppConfig.class
+alliancebackend\daoimpl\BlogDaoImpl.class
+alliancebackend\model\Error.class
+alliancebackend\controller\UserController.class
+alliancebackend\daoimpl\UserDaoImpl.class

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+
+<style>
+.btn-label {
+	position: relative;
+	left: -12px;
+	display: inline-block;
+	padding: 6px 12px;
+	background: rgba(0, 0, 0, 0.15);
+	border-radius: 3px 0 0 3px;
+}
+
+.btn-labeled {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.input-group {
+	margin-bottom: 10px;
+}
+
+.separator {
+	border-right: 1px solid #dfdfe0;
+}
+
+.facebook, .twitter {
+	min-width: 170px;
+}
+
+.facebook {
+	background-color: #354E84;
+	color: #fff;
+}
+
+.twitter {
+	background-color: #00A5E3;
+	color: #fff;
+}
+
+.facebook:hover, .twitter:hover {
+	color: #fff;
+}
+</style>
+<script>
+(function($){
+$(document).ready(function() {
+		$(".social-login-box").height($(".login-box").height() - 160);
+	});
+	});
+</script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-2"></div>
+			<div class="col-xs-12 col-sm-8 col-md-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Log in</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div
+								class="col-xs-6 col-sm-6 col-md-6 separator social-login-box">
+								<br /> <a href="https://www.facebook.com"
+									class="btn facebook btn-block" role="button">Log in using
+									Facebook</a> <br /> <a href="https://twitter.com"
+									class="btn twitter btn-block" role="button">Log in using
+									Twitter</a>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 login-box">
+								<form role="form">
+									<div class="input-group">
+										<span class="input-group-addon"><span
+											class="glyphicon glyphicon-user"></span></span> <input type="text"
+											ng-model="user.username" class="form-control"
+											placeholder="Username" required autofocus />
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><span
+											class="glyphicon glyphicon-lock"></span></span> <input
+											type="password" ng-model="user.password" class="form-control"
+											placeholder="Password" required />
+									</div>
+
+									Don't have an account? <a href="#/register">Sign up here</a>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="checkbox">
+									<label> <input type="checkbox" value="Remember">
+										Remember me
+									</label>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<button type="button" class="btn btn-labeled btn-success"
+									ng-click="submit()">
+									<span class="btn-label"><i
+										class="glyphicon glyphicon-ok"></i></span>Success
+								</button>
+								<button type="button" class="btn btn-labeled btn-danger">
+									<span class="btn-label"><i
+										class="glyphicon glyphicon-remove"></i></span>Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-2"></div>
+		</div>
+	</div>
+	
+	{{message}}
+	<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>

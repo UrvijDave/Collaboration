@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style type="text/css">
+.panel-primary>.panel-heading {
+	background-color: #00415d;
+	border-color: #00415d;
+}
+
+.btn-primary {
+	background-color: #00415d;
+	border-color: #00415d;
+}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+</head>
+<body ng-controller="UserController">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Well Come To Registration From</div>
+					<div class="panel-body">
+						<form role="form" method="post" action="" accept-charset="UTF-8">
+
+							<label for="fname">Full Name</label> <input type="text"
+								id="fname" class="form-control" name="fname"
+								ng-model="user.fullname" required="required"
+								placeholder="Fullname"> <label for="gender"
+								class="m-t-10">Your Gender</label> <select id="gender"
+								class="form-control" ng-model="user.gender" name="gender">
+								<option value="Unknow">Unknow</option>
+								<option value="MALE">Male</option>
+								<option value="FEMALE">Female</option>
+							</select> <label for="dob">Date Of Birth</label> <input type="text"
+								id="dob" class="form-control" name="dob"
+								ng-model="user.dateofbirth" required="required"
+								placeholder="DOB...."> <label for="mobile">Mobile
+								Number</label> <input type="text" id="mobile" class="form-control"
+								name="mobile" ng-model="user.mobile" required="required"
+								placeholder="MobileNumber..."> <label for="emailaddr"
+								class="m-t-10">Email Address</label> <input type="email"
+								id="emailaddr" class="form-control" name="email"
+								ng-model="user.email" required="required"
+								placeholder=" Name@gmail.com"> <label for="uname">User
+								Name</label> <input type="text" id="uname" class="form-control"
+								name="uname" ng-model="user.username" required="required"
+								placeholder="Username"> <label for="password"
+								class="m-t-10">Password</label> <input type="password"
+								id="password" class="form-control" name="password"
+								ng-model="user.password" required pattren=".{5,10}" required
+								title="5 to 10 char" placeholder="******"> <label
+								for="city">City</label> <input type="text" id="city"
+								class="form-control" name="city" ng-model="user.city"
+								placeholder="city..."> <label for="role" class="m-t-10">Role</label>
+							<select id="role" class="form-control" ng-model="user.role"
+								name="role">
+								<option ng-model="user.role" value="STUDENT">Student</option>
+								<option ng-model="user.role" value="ALUMNI">Alumni</option>
+								<option ng-mng-model="user.role" value="EMPLOYEE">Employee</option>
+							</select> <br />
+							<p class="signin button text-center">
+								<input type="submit" class="btn btn-primary m-t-10"
+									ng-click="registerUser()" value="Register" />
+							</p>
+							<p class="change_link text-center">
+								Already a member ? <a href="#login" class="to_register">
+									Login Here </a>
+							</p>
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	{{errorMessage}}
+</body>
+</html>

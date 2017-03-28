@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>View Profile</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>User ID:</td>
+				<td>{{currentUser.userId}}</td>
+			</tr>
+			<tr>
+				<td>Fullname:</td>
+				<td>{{currentUser.fullname}}</td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td>{{currentUser.gender}}
+			</tr>
+			<tr>
+				<td>Dob:</td>
+				<td>{{currentUser.dateofbirth}}</td>
+			</tr>
+			<tr>
+				<td>Mobile No:</td>
+				<td>{{currentUser.mobile}}</td>
+			</tr>
+			<tr>
+				<td>Email ID:</td>
+				<td>{{currentUser.email}}</td>
+			</tr>
+			<tr>
+				<td>User Name:</td>
+				<td>{{currentUser.username}}</td>
+			</tr>
+
+			<tr>
+				<td>City:</td>
+				<td>{{currentUser.city}}</td>
+			</tr>
+
+			<tr>
+				<td>role:</td>
+				<td>{{currentUser.role}}</td>
+			</tr>
+			<tr>
+				<td ng-show="currentUser.userId"><a
+					href="#/edit?id={{currentUser.userId}}">
+						<button type="button" class="btn btn-primary">Edit
+							Profile</button>
+				</a></td>
+			</tr>
+		</table>
+
+	</form>
+	{{errorMessage}}
+</body>
+</html>
